@@ -73,17 +73,20 @@
       padding-bottom: 1.40vw;
     }
 
-    #works a {
-      font-family: 'GothamNarrow book';
-      display: block;
-      text-decoration: none;
+    #works .item {
       margin-bottom: 0.98vw;
+    }
+
+    #works .item a {
+      font-family: 'GothamNarrow book';
+      text-decoration: none;
       letter-spacing: 0.2px;
     }
 
     #works a:hover {
       color: #0fd5ff;
       text-decoration: underline;
+      font-style: italic;
     }
 
     #contact {
@@ -111,9 +114,15 @@
   <div id="works">
     <div class="title">Works</div>
 
-    <a href="" target="_blank">Ring</a>
-    <a href="" target="_blank">Hello Office</a>
-    <a href="" target="_blank">His Her Taste</a>
+    <div class="item">
+      <a href="" target="_blank">Ring</a>
+    </div>
+    <div class="item">
+      <a href="" target="_blank">Hello Office</a>
+    </div>
+    <div class="item">
+      <a href="" target="_blank">His Her Taste</a>
+    </div>
   </div>
 
   <div id="contact">
