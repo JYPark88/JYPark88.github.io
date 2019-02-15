@@ -7,27 +7,39 @@
   <title>zoeyhyeinlee</title>
   <style>
     @font-face{font-family:'Avenir'; src:url('./fonts/AvenirLTStd-Book.otf')}
-    @font-face{font-family:'Gotham black'; src:url('./fonts/GOTHAM-BLACK.ttf')}
-    @font-face{font-family:'Gotham bold'; src:url('./fonts/Gotham-Bold.ttf')}
-    @font-face{font-family:'Gotham book'; src:url('./fonts/Gotham-Book.otf')}
-    @font-face{font-family:'Gotham book italic'; src:url('./fonts/Gotham-BookItalic.otf')}
-    @font-face{font-family:'Serifa'; src:url('./fonts/Serifa 55 Roman.ttf')}
+    @font-face{font-family:'GothamNarrow black'; src:url('./fonts/GothamNarrow-Black.otf')}
+    @font-face{font-family:'GothamNarrow book'; src:url('./fonts/GothamNarrow-Book.otf')}
+    @font-face{
+      font-family:'GothamNarrow book';
+      src:url('./fonts/GothamNarrow-BookItalic.otf');
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "Serifa";
+      src: url("./fonts/Serifa Light.ttf");
+    }
+    @font-face {
+      font-family: "Serifa";
+      src: url("./fonts/Serifa Bold.ttf");
+      font-weight: bold;
+    }
 
     html, body {
       margin: 0;
       padding: 0;
 
       position: fixed;
-      top: 0;
+      top: 5.2vw;
       bottom: 0;
-      left: 0;
+      left: 11.6vw;
       right: 0;
 
-      background-color: #ffffff;
-      background-image: linear-gradient(104deg, #ffffff 58%, #222222 58%);
+      background-color: #fafafa;
+      color: #111111;
     }
 
-    h1 {
+    p {
       margin: 0;
       padding: 0;
     }
@@ -36,101 +48,76 @@
       color: inherit;
     }
 
-    .left {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 50%;
-      color: #111111;
-      padding-top: 18.72vh;
-      padding-left: 11.6vw;
-    }
-
-    .right {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      right: 0;
-      color: #ffffff;
-      padding-left: 17.6vw;
-      padding-bottom: 32.11vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .intro {
-      font-family: 'Gotham black';
-      font-size: 5.7vw;
-      letter-spacing: -1.2px;
-    }
-
-    #job {
-      font-family: 'Avenir';
-      font-size: 2vw;
-      line-height: 2.82vw;
-      letter-spacing: -1.2px;
-      margin-top: 2.92vw;
-    }
-
-    #location {
-      font-family: 'Avenir';
-      font-size: 1.34vw;
-      letter-spacing: -0.76px;
-      margin-top: 2.73vw;
-      padding-bottom: 13.3vh;
-    }
-
-    #email {
-      position: absolute;
-      left: 11.6vw;
-      bottom: 3.55vh;
+    .intro {;
       font-family: 'Serifa';
-      font-size: 0.95vw;
-      color: #999999;
-      line-height: 2.73vw;
+      font-size: 5.93vw;
+      line-height: 5.72vw;
+      letter-spacing: -1.2px;
     }
 
-    .project {
+    .intro .name {
+      font-weight: bold;
+    }
+
+    .intro.second {
+      margin-top: -2.2vw;
+    }
+
+    #works {
+      margin-top: 6.87vw;
+      font-size: 1.45vw;
+    }
+
+    #works .title {
+      font-family: 'GothamNarrow black';
+      padding-bottom: 1.40vw;
+    }
+
+    #works a {
+      font-family: 'GothamNarrow book';
       display: block;
-      font-family: 'Avenir';
-      font-size: 1.34vw;
-      letter-spacing: -0.4px;
-      padding-bottom: 1.12vh;
+      text-decoration: none;
+      margin-bottom: 0.98vw;
+      letter-spacing: 0.2px;
     }
 
-    .project_title {
-      margin-bottom: 2.62vh;
-    }
-
-    a.project {
+    #works a:hover {
+      color: #0fd5ff;
       text-decoration: underline;
+    }
+
+    #contact {
+      position: fixed;
+      right: -4vw;
+      top: 45%;
+      transform: rotate(90deg);
+      font-family: 'Serifa';
+      font-size: 1.04vw;
+      color: #868686;
     }
   </style>
 </head>
 <body>
-  <div class="left">
+  <p class="intro">
+    Hi there<br/>
+    I’m <span class="name">Hyein Lee</span><br/>
+  </p>
+  <p class="intro second">
+    ,a ux/ui designer<br/>
+    based in Seoul,<br/>
+    South Korea now.
+  </p>
 
-    <h1 class="intro">HI THERE</h1>
-    <h1 class="intro" style="margin-top: 2.45vw">I’m Hyein Lee</h1>
+  <div id="works">
+    <div class="title">Works</div>
 
-    <div id="job">
-      Product Designer
-      <br/>
-      UX Designer
-    </div>
-
-    <div id="location">Seoul, South Korea</div>
-    <div id="email">Contact me : zoeyhyeinlee@gmail.com</div>
+    <a href="" target="_blank">Ring</a>
+    <a href="" target="_blank">Hello Office</a>
+    <a href="" target="_blank">His Her Taste</a>
   </div>
 
-  <div class="right">
-    <div class="project project_title">My Works</div>
-    <a href="www.naver.com" class="project">Ring</a>
-    <a class="project">Hello Office</a>
-    <a class="project">His Her Taste</a>
+  <div id="contact">
+    Contact me : zoeyhyeinlee@gmail.com
   </div>
 </body>
 </html>
